@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('pofile','UserController@profile')->name('profile');
+Route::post('profile','UserController@update_avatar')->name('update_avatar');
